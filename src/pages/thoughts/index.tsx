@@ -4,11 +4,10 @@ import Layout from '../../components/layout.component'
 import { getAllThoughts } from '../../lib/thoughts-api.lib'
 
 const Thoughts: FC<any> = ({ thoughts }) => {
-  console.log(thoughts)
   return (
     <Layout title="Thoughts">
       <ul>
-        {thoughts?.map((x) => (
+        {thoughts?.map((x: any) => (
           <li key={x.id}>
             <Link href={`/thoughts/${x.slug}`}>
               <a className="flex flex-col text-lg font-semibold transition-colors hover:opacity-70">
