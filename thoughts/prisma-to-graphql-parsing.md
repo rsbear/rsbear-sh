@@ -32,3 +32,5 @@ type Recipe {
 ```
 
 They're basically identical in some regards right.. let's give it a shot. It looks like we might be able to loop over the rows in the document and then perhaps trim the string of the value of said row.
+
+But yeah ultimately never finished and am only handling basic fields. And base types, its up to the dev to write query and mutation types.
