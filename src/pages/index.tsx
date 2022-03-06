@@ -55,7 +55,7 @@ const HomeContents = () => (
         </a>{' '}
         - an NPM module for parsing a Prisma schema and generating a GraphQL
         schema.{' '}
-        <Link href="/">
+        <Link href="/thoughts/prisma-to-graphql-parsing">
           <a className="text-neutral-50 underline">Read more</a>
         </Link>
       </p>
