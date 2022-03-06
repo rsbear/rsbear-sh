@@ -33,4 +33,8 @@ type Recipe {
 
 They're basically identical in some regards right.. let's give it a shot. It looks like we might be able to loop over the rows in the document and then perhaps trim the string of the value of said row.
 
-But yeah ultimately never finished and am only handling basic fields. And base types, its up to the dev to write query and mutation types.
+Where I left off, the result schema is close to what I wanted; we're producing the base GraphQL types from the Prisma models successfully. However there are a ton of edge cases I'm not handling, such as JSON columns, comment lines, and regenerating the GraphQL schema can result in some oddities.
+
+But yeah ultimately never finished, but had a lot of fun and learned a lot.
+
+Feel free to take a peek at the [README](https://github.com/rsbear/gp-schematic/blob/main/README.md) to give it a test.
