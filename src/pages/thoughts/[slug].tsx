@@ -60,7 +60,7 @@ export const getStaticProps = async ({ params }: any) => {
     .process(thought.content || '')
   const content = parseContent.toString()
 
-  return {
-    props: { thought, content },
-  }
+
+  return { props: { thought, content } }
+
 }

@@ -1,10 +1,10 @@
-import type { NextPage } from 'next'
-import Link from 'next/link'
-import Layout from '../components/layout.component'
+import type { NextPage } from "next";
+import Link from "next/link";
+import Layout from "../components/layout.component";
 
 const Home: NextPage = () => {
-  return (
-    <Layout title="Ross Stevens">
+	return (
+		<Layout title="Ross Stevens">
       <>
         <p className="pb-4 text-neutral-400">
           I'm a frontend engineer based in Austin, TX, currently building at
@@ -21,13 +21,13 @@ const Home: NextPage = () => {
         <HomeContents />
       </>
     </Layout>
-  )
-}
+	);
+};
 
-export default Home
+export default Home;
 
 const HomeContents = () => (
-  <ul className="list-disc pl-4 text-neutral-400">
+	<ul className="list-disc pl-4 text-neutral-400">
     <li className="pb-4">
       <p>
         <a
@@ -61,4 +61,4 @@ const HomeContents = () => (
       </p>
     </li>
   </ul>
-)
+);

@@ -1,13 +1,12 @@
-import { FC } from 'react'
-import Link from 'next/link'
-import Head from 'next/head'
+import { FC } from "react";
+import Link from "next/link";
+import Head from "next/head";
 
-const Layout: FC<{ title: string; children: JSX.Element }> = ({
-  title,
-  children,
-}) => {
-  return (
-    <div className="mx-auto w-[600px]">
+const Layout: FC<{ title: string, children: JSX.Element }> = (
+	{ title, children },
+) => {
+	return (
+		<div className="mx-auto w-[600px]">
       <Head>
         <title>ross stevens and the web</title>
         <link rel="icon" href="/favicon.ico" />
@@ -53,7 +52,7 @@ const Layout: FC<{ title: string; children: JSX.Element }> = ({
         </ul>
       </footer>
     </div>
-  )
-}
+	);
+};
 
-export default Layout
+export default Layout;
