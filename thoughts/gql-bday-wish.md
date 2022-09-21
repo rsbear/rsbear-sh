@@ -1,47 +1,46 @@
 ---
 id: 9037820p1jfsd9f893028402184
-title: A little wish for what GraphQL was on the frontend.
-desc: Please gql-codegen team, make this..
+title: GraphQL wishes for the frontend.
+desc: Please codegen, please..
 slug: gql-bday-wish
-created: April 14, 2022
+created: April 15, 2022
 year: 2022
 repo:
 ---
 
-GraphQL on the frontend, it's nice - clear, concise, and in classic GraphQL fashion, self documenting.
-That's great and all, but since it's a different language you can just forget about leveraging TypeScript.
-And well that, that sucks. Let's take a look at a basic example.
+I was recently looking back at graphql-codegen and saw they're working on [gql-tag-operations-preset]("https://www.the-guild.dev/graphql/codegen/plugins/presets/gql-tag-operations-preset"). 
+Just.. WHY?! Sure it's cool and all that you're making a template literal type safe, but why!? Why is that the choice?
+Can we just not write GraphQL as a language in our TypeScript codebases? 
 
-```typescriptreact
-//MarketData.component.tsx
-...import statements
-
-const MARKET_DATA_QUERY = gql`
-	query getStock($symbol: String!, $currency: String!) {
-	  getStock(symbol: $symbol, currency: $currency) {
-		  ask
-			bid
-		}
-	}
-`
-
-const MarketData: FC<{ ... }> = (...) => {
-	const { data } = useQuery(MARKET_DATA_QUERY, {
-		variables: { currency: "USD", symbol: "NVDA" }
-	})
-
-	return (
-	  <div>
-		  <h3>NVDA Ask</h3>
-      <span>{data?.getStock?.high}</span> {/* sneaky sneaky error */}
-		</div>
-	)
-}
-
+Here is what I want..
 
 ```
+const FurnitureItem: FC<{ id: string }> = (props) => {
+  const { data } = useQuery({
+    name: "whateverGetFurnitureById" // optional name of query
+    query: "getFurnitureById" // a type safe union from type Query keys on upstream schema
+    variables: {
+      id: props.id
+    },
+    fields: [ // type safe union keys for type to be returned
+      "id",
+      "title",
+      "sku",
+      "colors": [
+        "id",
+        "name"
+        "fabricType"
+      ]
+    ],
+    options: {
+      ...whatever options your data fetching lib does
+    }
+  })
 
-App is running live on prod and the value meant to be rendered just is not there. That ain't good.
+  return <>...</>
+}
+```
 
-I've tried just about every GraphQL / TypeScript library under the sun and I really haven't found what I want.
+See no graphql.. Is this bad? I feel like doing this would be pretty sick, but maybe i'm dead wrong.
+you would stay in the context of react, and stay within the language of the rest of the logic.
 
