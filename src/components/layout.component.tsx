@@ -47,7 +47,7 @@ const Layout: FC<{ title: string; children: JSX.Element }> = ({
               target="_blank"
               rel="noopener noreferrer"
             >
-              ross@rsbear.sh
+              hellorosss@gmail.com
             </a>
           </li>
         </ul>

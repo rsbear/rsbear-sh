@@ -31,6 +31,31 @@ const ThoughtPage: FC<any> = ({ thought, content }) => {
       <article className="prose pt-8">
         <div dangerouslySetInnerHTML={{ __html: content }}></div>
       </article>
+      <footer className="mb-20 mt-10 border-t border-neutral-600">
+        <ul className="flex items-center pt-10">
+          <li>
+            <a
+              className="flex items-center justify-center gap-2 underline"
+              href="https://github.com/rsbear"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          </li>
+          <li className="mx-2">&middot;</li>
+          <li>
+            <a
+              className="flex items-center justify-center gap-2 underline"
+              href="mailto:hellorosss@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              hellorosss@gmail.com
+            </a>
+          </li>
+        </ul>
+      </footer>
     </div>
   )
 }
@@ -60,7 +85,5 @@ export const getStaticProps = async ({ params }: any) => {
     .process(thought.content || '')
   const content = parseContent.toString()
 
-
   return { props: { thought, content } }
-
 }
