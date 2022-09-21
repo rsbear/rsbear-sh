@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 const ThoughtPage: FC<any> = ({ thought, content }) => {
   return (
-    <div className="mx-auto max-w-[75ch] py-20">
+    <div className="mx-auto box-border max-w-[75ch] py-20 px-4 lg:px-0 xl:px-0">
       <Link href="/thoughts">
         <a>
           <HiOutlineArrowNarrowLeft size={28} className="text-neutral-500" />

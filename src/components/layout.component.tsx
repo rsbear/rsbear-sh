@@ -24,7 +24,9 @@ const Layout: FC<{ title: string; children: JSX.Element }> = ({
             <a className="text-neutral-50 underline">Thoughts</a>
           </Link>
         </nav>
-        {children}
+        <div className="box-border sm:px-4 md:px-6 lg:px-0 xl:px-0">
+          {children}
+        </div>
       </main>
 
       <footer className="mb-20 mt-10 border-t border-neutral-600">
