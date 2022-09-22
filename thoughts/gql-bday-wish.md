@@ -1,5 +1,5 @@
 ---
-id: 9037820p1jfsd9f893028402184
+id: 9037820p1jfsd9f893028402181
 title: GraphQL wishes for the frontend.
 desc: Please codegen, please..
 slug: gql-bday-wish
