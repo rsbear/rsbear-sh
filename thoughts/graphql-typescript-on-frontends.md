@@ -17,25 +17,25 @@ And that sucks. Let's take a look at a basic example.
 ...import statements
 
 const MARKET_DATA_QUERY = gql`
-	query getStock($symbol: String!, $currency: String!) {
-	  getStock(symbol: $symbol, currency: $currency) {
-		  ask
+  query getStock($symbol: String!, $currency: String!) {
+    getStock(symbol: $symbol, currency: $currency) {
+      ask
       bid
-		}
-	}
+    }
+  }
 `
 
 const MarketData: FC<{ ... }> = (...) => {
-	const { data } = useQuery(MARKET_DATA_QUERY, {
+  const { data } = useQuery(MARKET_DATA_QUERY, {
     variables: { currency: "USD", symbol: "NVDA" } // not type safe :(
-	})
+  })
 
-	return (
-	  <div>
+  return (
+    <div>
       <h3>NVDA Ask</h3>
       <span>{data?.getStock?.high}</span> {/* sneaky sneaky error */}
-		</div>
-	)
+    </div>
+  )
 }
 ```
 
